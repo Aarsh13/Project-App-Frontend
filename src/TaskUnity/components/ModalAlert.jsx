@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { useTaskUnityContext } from '../../hooks';
+import { useSynkrContext } from '../../hooks';
 
 export const ModalAlert = ({ children }) => {
 
-  const { isOpenModalAlert, onShowModalAlert, typeModal } = useTaskUnityContext();
+  const { isOpenModalAlert, onShowModalAlert, typeModal } = useSynkrContext();
 
   return (
     <Transition.Root show={isOpenModalAlert} as={Fragment}>
@@ -44,7 +44,7 @@ export const ModalAlert = ({ children }) => {
               <div className="absolute top-2 right-3">
                 <button
                   type="button"
-                  className=" bg-white rounded-md text-taskunity-800 hover:text-opacity-90 transition-colors focus:outline-none"
+                  className=" bg-white rounded-md text-Synkr-800 hover:text-opacity-90 transition-colors focus:outline-none"
                   onClick={() => onShowModalAlert(typeModal)}
                 >
                   <span className="sr-only">Cerrar</span>

@@ -1,9 +1,9 @@
 import { Dialog } from '@headlessui/react';
-import { useTaskUnityContext } from '../../hooks';
+import { useSynkrContext } from '../../hooks';
 
 export const AlertDeleteProject = () => {
 
-  const { onShowModalAlert, startDeleteProject } = useTaskUnityContext();
+  const { onShowModalAlert, startDeleteProject } = useSynkrContext();
 
   return (
     <>
@@ -19,7 +19,7 @@ export const AlertDeleteProject = () => {
         <div className='flex justify-end gap-4 mt-4'>
           <button
             type='button'
-            className='rounded-lg border border-taskunity-800 px-4 py-2 text-base text-taskunity-800 font-bold'
+            className='rounded-lg border border-Synkr-800 px-4 py-2 text-base text-Synkr-800 font-bold'
             onClick={onShowModalAlert}
           >
             Cancel

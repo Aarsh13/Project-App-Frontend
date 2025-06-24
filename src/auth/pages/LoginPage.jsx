@@ -40,7 +40,7 @@ export const LoginPage = () => {
 
   return (
     <>
-      <h1 className="text-2xl text-center font-bold uppercase">Log in to your account to <span className="text-taskunity-800">manage your projects</span></h1>
+      <h1 className="text-2xl text-center font-bold uppercase">Log in to your account to <span className="text-Synkr-800">manage your projects</span></h1>
 
       {alert?.message && <Alert alert={alert} />}
 
@@ -60,7 +60,7 @@ export const LoginPage = () => {
             name='email'
             value={email}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
         <div className="mb-5">
@@ -75,13 +75,13 @@ export const LoginPage = () => {
             name='password'
             value={password}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
         <div className="mb-10">
           <button
-            className="w-full cursor-pointer rounded-md border bg-taskunity-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
+            className="w-full cursor-pointer rounded-md border bg-Synkr-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
             type="submit"
           >
             Log In
@@ -93,7 +93,7 @@ export const LoginPage = () => {
             or
             <Link
               to='/auth/forgot-password'
-              className='text-taskunity-800 underline font-bold'
+              className='text-Synkr-800 underline font-bold'
             >
               I forgot my password
             </Link>
@@ -102,7 +102,7 @@ export const LoginPage = () => {
             Don't have an account?
             <Link
               to='/auth/register'
-              className='text-taskunity-800 underline font-bold'
+              className='text-Synkr-800 underline font-bold'
             >
               Register
             </Link>

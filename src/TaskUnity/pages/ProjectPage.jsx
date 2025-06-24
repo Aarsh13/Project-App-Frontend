@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import io from 'socket.io-client';
-import { useAdmin, useTaskUnityContext } from '../../hooks';
+import { useAdmin, useSynkrContext } from '../../hooks';
 import {
   Spinner,
   TabsProject,
@@ -31,7 +31,7 @@ export const ProjectPage = () => {
     deteleTaskToState,
     updateTaskToState,
     toggleTaskToState,
-  } = useTaskUnityContext();
+  } = useSynkrContext();
   const { isAdmin } = useAdmin();
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export const ProjectPage = () => {
       <div className='inline-block'>
         <Link
           to='/projects'
-          className='text-taskunity-800 flex items-center gap-1 mb-4'
+          className='text-Synkr-800 flex items-center gap-1 mb-4'
         >
           <ArrowLeftIcon />
           <span>All projects</span>

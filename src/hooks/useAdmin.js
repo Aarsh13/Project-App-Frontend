@@ -1,8 +1,8 @@
 
-import { useAuth, useTaskUnityContext } from './';
+import { useAuth, useSynkrContext } from './';
 
 export const useAdmin = () => {
-  const { project } = useTaskUnityContext();
+  const { project } = useSynkrContext();
   const { auth } = useAuth();
 
   const isAdmin = auth.user._id === project.creator;

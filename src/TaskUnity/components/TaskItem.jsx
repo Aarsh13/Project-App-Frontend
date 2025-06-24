@@ -1,4 +1,4 @@
-import { useAdmin, useTaskUnityContext } from '../../hooks';
+import { useAdmin, useSynkrContext } from '../../hooks';
 import { DaysRemaining } from './';
 import { EditIcon, DeleteIcon, CheckIcon } from './icons';
 
@@ -11,7 +11,7 @@ const prioritiesColors = {
 export const TaskItem = ({ task }) => {
 
   const { _id, name, description, dueDate, priority, isCompleted, completedBy } = task;
-  const { onModalEditingTask, onShowModalAlert, addDataToDelete, startToggleTask } = useTaskUnityContext();
+  const { onModalEditingTask, onShowModalAlert, addDataToDelete, startToggleTask } = useSynkrContext();
   const { isAdmin } = useAdmin();
 
   const onClickDelete = () => {
@@ -49,7 +49,7 @@ export const TaskItem = ({ task }) => {
                 <li>
                   <button
                     type='button'
-                    className='hover:text-taskunity-800 transition-colors'
+                    className='hover:text-Synkr-800 transition-colors'
                     onClick={() => onModalEditingTask(task)}
                   >
                     <EditIcon />

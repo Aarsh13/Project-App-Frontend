@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useTaskUnityContext } from '../../hooks/useTaskUnityContext';
+import { useSynkrContext } from '../../hooks/useSynkrContext';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const TaskStats = () => {
 
-  const { projects } = useTaskUnityContext();
+  const { projects } = useSynkrContext();
 
   const taskStats = useMemo(() => {
     let completedTasks = 0;

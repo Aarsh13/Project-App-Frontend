@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Dialog } from '@headlessui/react';
-import { useForm, useTaskUnityContext } from '../../hooks';
+import { useForm, useSynkrContext } from '../../hooks';
 import { Alert } from '../../components';
 import { getCurrentDate } from '../helpers';
 
@@ -21,7 +21,7 @@ export const FormTask = () => {
     priority,
     onInputChange, formState, onResetForm, updateDataForm
   } = useForm(initialForm);
-  const { startSaveTask, showAlert, alert, project, task } = useTaskUnityContext();
+  const { startSaveTask, showAlert, alert, project, task } = useSynkrContext();
 
   const { id: projectId } = useParams();
   const deadlineProject = project?.deadline?.split('T')[0];
@@ -76,7 +76,7 @@ export const FormTask = () => {
             name='name'
             value={name}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
@@ -88,7 +88,7 @@ export const FormTask = () => {
             name='description'
             value={description}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
@@ -103,7 +103,7 @@ export const FormTask = () => {
             max={deadlineProject}
             value={dueDate}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
@@ -115,7 +115,7 @@ export const FormTask = () => {
             name='priority'
             value={priority}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           >
             <option value="" disabled>-- Select --</option>
             <option value="baja">Low</option>
@@ -126,7 +126,7 @@ export const FormTask = () => {
 
         <div>
           <button
-            className="w-full cursor-pointer rounded-md border bg-taskunity-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
+            className="w-full cursor-pointer rounded-md border bg-Synkr-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
             type="submit"
           >
             {id ? 'Save changes' : 'Create task'}

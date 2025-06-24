@@ -1,9 +1,9 @@
-import { useTaskUnityContext } from '../../hooks';
+import { useSynkrContext } from '../../hooks';
 import { DeleteIcon } from './icons';
 
 export const CollaboratorItem = ({ collaborator }) => {
 
-  const { onShowModalAlert, addDataToDelete } = useTaskUnityContext();
+  const { onShowModalAlert, addDataToDelete } = useSynkrContext();
 
   const onClickDelete = () => {
     onShowModalAlert('collaborator');

@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTaskUnityContext } from '../../hooks';
+import { useSynkrContext } from '../../hooks';
 import { SearchIcon } from './icons';
 import { Combobox, Transition } from '@headlessui/react';
 
@@ -8,7 +8,7 @@ export const SearchProject = () => {
 
   const [query, setQuery] = useState('');
 
-  const { projects } = useTaskUnityContext();
+  const { projects } = useSynkrContext();
 
   const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ export const SearchProject = () => {
                     key={project._id}
                     className={({ active }) =>
                       `relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-                        active ? 'bg-taskunity-800 text-white' : 'text-gray-900'
+                        active ? 'bg-Synkr-800 text-white' : 'text-gray-900'
                       }`
                     }
                     value={project}

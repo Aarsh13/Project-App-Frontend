@@ -1,5 +1,5 @@
 import { Dialog } from '@headlessui/react';
-import { useForm, useTaskUnityContext } from '../../hooks';
+import { useForm, useSynkrContext } from '../../hooks';
 import { Alert } from '../../components';
 import { getCurrentDate } from '../helpers';
 import { useEffect } from 'react';
@@ -25,7 +25,7 @@ export const FormProject = () => {
     updateDataForm,
   } = useForm(initialForm);
 
-  const { showAlert, alert, projectToEdit, startSaveProject } = useTaskUnityContext();
+  const { showAlert, alert, projectToEdit, startSaveProject } = useSynkrContext();
 
   useEffect(() => {
     if (projectToEdit?._id) {
@@ -82,7 +82,7 @@ export const FormProject = () => {
             name='name'
             value={name}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
         <div className="mb-5">
@@ -96,7 +96,7 @@ export const FormProject = () => {
             name='description'
             value={description}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
@@ -113,7 +113,7 @@ export const FormProject = () => {
             min={getCurrentDate()}
             value={deadline}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
@@ -129,13 +129,13 @@ export const FormProject = () => {
             name='client'
             value={client}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
         <div>
           <button
-            className="w-full cursor-pointer rounded-md border bg-taskunity-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
+            className="w-full cursor-pointer rounded-md border bg-Synkr-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90"
             type="submit"
           >
             {id ? 'Save changes' : 'Create project'}

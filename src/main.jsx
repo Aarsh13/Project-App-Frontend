@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TaskUnityApp from './TaskUnityApp';
+import SynkrApp from './SynkrApp';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TaskUnityApp />
+    <SynkrApp />
   </React.StrictMode>,
 )

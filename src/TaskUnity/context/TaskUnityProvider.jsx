@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import io from 'socket.io-client';
-import { TaskUnityContext } from './TaskUnityContext';
+import { SynkrContext } from './SynkrContext';
 import {
   addCollaborator,
   createProject,
@@ -18,7 +18,7 @@ import {
 
 let socket;
 
-export const TaskUnityProvider = ({ children }) => {
+export const SynkrProvider = ({ children }) => {
 
   //TODO: Mejorar obtención de token para no repetir tanto código
 
@@ -255,14 +255,14 @@ export const TaskUnityProvider = ({ children }) => {
     setProject(projectUpdated);
   }
 
-  const logoutTaskUnity = () => {
+  const logoutSynkr = () => {
     setProjects([]);
     setProject({});
     setAlert({});
   }
 
   return (
-    <TaskUnityContext.Provider
+    <SynkrContext.Provider
       value={{
         addDataToDelete,
         alert,
@@ -294,10 +294,10 @@ export const TaskUnityProvider = ({ children }) => {
         deteleTaskToState,
         updateTaskToState,
         toggleTaskToState,
-        logoutTaskUnity,
+        logoutSynkr,
       }}
     >
       {children}
-    </TaskUnityContext.Provider>
+    </SynkrContext.Provider>
   )
 }

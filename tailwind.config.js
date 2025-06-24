@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'taskunity': {
+        'Synkr': {
           '50': '#f0f3fd',
           '100': '#e4eafb',
           '200': '#ced7f7',

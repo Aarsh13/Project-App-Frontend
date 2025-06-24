@@ -1,11 +1,11 @@
 import { useEffect, useMemo } from 'react';
-import { useTaskUnityContext, useAuth } from '../../hooks';
+import { useSynkrContext, useAuth } from '../../hooks';
 import { ProjectStatsByMonth, TaskStats, Spinner } from '../components';
 import { CollaboratorsIcon, ProjectIcon, TaskIcon } from '../components/icons';
 
 export const DashboardPage = () => {
 
-  const { startGetProjects, projects, isLoading } = useTaskUnityContext();
+  const { startGetProjects, projects, isLoading } = useSynkrContext();
   const { auth } = useAuth();
 
   const projectsQty = useMemo(() => projects.length, [projects]);
@@ -30,21 +30,21 @@ export const DashboardPage = () => {
             <ProjectIcon styles='w-8 h-8' />
             <div>
               <p className='font-bold'>Total Projects</p>
-              <p className='text-3xl font-bold text-taskunity-800'>{projectsQty}</p>
+              <p className='text-3xl font-bold text-Synkr-800'>{projectsQty}</p>
             </div>
           </div>
           <div className='flex gap-4 items-center p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors text-[#545454]'>
             <CollaboratorsIcon styles='w-8 h-8' />
             <div>
               <p className='font-bold'>	Collaborating On Projects</p>
-              <p className='text-3xl font-bold text-taskunity-800'>{projectsCollaboratorQty}</p>
+              <p className='text-3xl font-bold text-Synkr-800'>{projectsCollaboratorQty}</p>
             </div>
           </div>
           <div className='flex gap-4 items-center p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition-colors text-[#545454]'>
             <TaskIcon styles='w-8 h-8' />
             <div>
               <p className='font-bold'>Total Tasks</p>
-              <p className='text-3xl font-bold text-taskunity-800'>{tasksQty}</p>
+              <p className='text-3xl font-bold text-Synkr-800'>{tasksQty}</p>
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
-import { useAdmin, useTaskUnityContext } from '../../hooks';
+import { useAdmin, useSynkrContext } from '../../hooks';
 import { TasksList } from './TasksList';
 import { Spinner } from './Spinner';
 import { PlusIcon } from './icons';
 
 export const TabTasks = () => {
 
-  const { project, isLoading, onShowModal } = useTaskUnityContext();
+  const { project, isLoading, onShowModal } = useSynkrContext();
   const { isAdmin } = useAdmin();
 
   if (isLoading) return <Spinner />
@@ -16,7 +16,7 @@ export const TabTasks = () => {
         (isAdmin) &&
         <button
           type='button'
-          className='flex gap-2 w-max rounded-lg border bg-taskunity-800 px-4 py-2 text-base text-white font-bold transition-colors hover:bg-opacity-90 mt-4 md:mt-0'
+          className='flex gap-2 w-max rounded-lg border bg-Synkr-800 px-4 py-2 text-base text-white font-bold transition-colors hover:bg-opacity-90 mt-4 md:mt-0'
           onClick={() => onShowModal('task')}
         >
           <PlusIcon />

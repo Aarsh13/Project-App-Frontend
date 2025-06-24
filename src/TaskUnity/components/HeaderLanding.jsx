@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 export const HeaderLanding = () => {
   return (
-    <header className='bg-taskunity-50 border-b'>
+    <header className='bg-Synkr-50 border-b'>
       <nav className="max-w-6xl mx-auto">
         <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-0 py-4 mx-4 md:mx-8 lg:mx-0">
           <Link to={'/'}>
-            <img src="/assets/taskunity-logo.png" className="h-10" alt="TaskUnity Logo" />
+            <img src="/assets/Synkr-logo.png" className="h-10" alt="Synkr Logo" />
           </Link>
 
           <ul className='flex gap-2 mx-2 lg:mx-0'>
@@ -21,7 +21,7 @@ export const HeaderLanding = () => {
             <li>
               <Link
                 to='/auth/register'
-                className='w-max rounded-lg border bg-taskunity-800 px-4 py-2 text-base text-white font-bold transition-colors hover:bg-opacity-90'
+                className='w-max rounded-lg border bg-Synkr-800 px-4 py-2 text-base text-white font-bold transition-colors hover:bg-opacity-90'
               >
                 <span>Sign up</span>
               </Link>

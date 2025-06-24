@@ -1,6 +1,6 @@
 import { useContext } from 'react';
-import { TaskUnityContext } from '../TaskUnity/context';
+import { SynkrContext } from '../Synkr/context';
 
-export const useTaskUnityContext = () => {
-  return useContext(TaskUnityContext);
+export const useSynkrContext = () => {
+  return useContext(SynkrContext);
 }

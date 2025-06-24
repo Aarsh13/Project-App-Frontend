@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { useTaskUnityContext } from '../../hooks';
+import { useSynkrContext } from '../../hooks';
 import { getMonthName } from '../helpers';
 
 // Register chart components
@@ -21,7 +21,7 @@ ChartJS.register(
 
 export const ProjectStatsByMonth = () => {
 
-  const { projects } = useTaskUnityContext();
+  const { projects } = useSynkrContext();
 
   // Count number of projects per month-year
   const projectsByMonthYear = projects.reduce((acc, project) => {

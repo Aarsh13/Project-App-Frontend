@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Alert } from '../../components';
-import { useForm, useTaskUnityContext } from '../../hooks';
+import { useForm, useSynkrContext } from '../../hooks';
 import { CollaboratorResult, Spinner } from './';
 
 export const FormCollaborator = () => {
 
   const { email, onInputChange } = useForm({ email: '' });
 
-  const { startSearchCollaborator, showAlert, alert, collaborator } = useTaskUnityContext();
+  const { startSearchCollaborator, showAlert, alert, collaborator } = useSynkrContext();
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmitForm = async (e) => {
@@ -50,14 +50,14 @@ export const FormCollaborator = () => {
             name='email'
             value={email}
             onChange={onInputChange}
-            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-taskunity-400 focus-visible:shadow-none py-3 px-5"
+            className="border-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] outline-none focus:border-Synkr-400 focus-visible:shadow-none py-3 px-5"
           />
         </div>
 
         <div>
           <button
             type="submit"
-            className="w-full cursor-pointer rounded-md border bg-taskunity-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90 disabled:bg-opacity-50"
+            className="w-full cursor-pointer rounded-md border bg-Synkr-800 py-3 px-5 text-base text-white font-bold transition-colors hover:bg-opacity-90 disabled:bg-opacity-50"
             disabled={isLoading}
           >
             Search collaborator

@@ -1,10 +1,10 @@
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { AuthLayout } from '../auth/layout/AuthLayout';
-import { AdminLayout, LandingLayout } from '../TaskUnity/layout';
+import { AdminLayout, LandingLayout } from '../Synkr/layout';
 import AuthRoutes from '../auth/routes/AuthRoutes';
-import { DashboardRoutes, ProjectsRoutes, LandingRoutes } from '../TaskUnity/routes/TaskUnityRoutes';
-import { ErrorPage } from '../TaskUnity/pages';
+import { DashboardRoutes, ProjectsRoutes, LandingRoutes } from '../Synkr/routes/SynkrRoutes';
+import { ErrorPage } from '../Synkr/pages';
 
 const AppRouter = [
   {

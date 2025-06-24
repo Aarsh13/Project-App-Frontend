@@ -1,18 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppRouter from './router/AppRouter';
 import { AuthProvider } from './auth/context';
-import { TaskUnityProvider } from './TaskUnity/context/TaskUnityProvider';
+import { SynkrProvider } from './Synkr/context/SynkrProvider';
 
 const router = createBrowserRouter(AppRouter);
 
-const TaskUnityApp = () => {
+const SynkrApp = () => {
   return (
     <AuthProvider>
-      <TaskUnityProvider>
+      <SynkrProvider>
         <RouterProvider router={router} />
-      </TaskUnityProvider>
+      </SynkrProvider>
     </AuthProvider>
   )
 }
 
-export default TaskUnityApp;
+export default SynkrApp;

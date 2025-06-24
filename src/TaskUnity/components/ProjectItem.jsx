@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { DaysRemaining } from './DaysRemaining';
-import { useAuth, useTaskUnityContext } from '../../hooks';
+import { useAuth, useSynkrContext } from '../../hooks';
 import { EditIcon, DeleteIcon } from './icons';
 
 export const ProjectItem = ({ project }) => {
 
   const { auth } = useAuth();
-  const { onShowModalAlert, addDataToDelete, onModalEditingProject } = useTaskUnityContext();
+  const { onShowModalAlert, addDataToDelete, onModalEditingProject } = useSynkrContext();
 
   const { name, client, _id, deadline, description, creator } = project;
 
@@ -21,7 +21,7 @@ export const ProjectItem = ({ project }) => {
         <div className='absolute top-4 right-4'>
           {
             (auth.user._id !== creator) &&
-            <p className='text-xs font-bold p-1 bg-[#EAF1F7] text-taskunity-800 rounded'>Collaborator</p>
+            <p className='text-xs font-bold p-1 bg-[#EAF1F7] text-Synkr-800 rounded'>Collaborator</p>
           }
         </div>
         <div className='flex flex-col justify-center min-h-full'>
@@ -30,7 +30,7 @@ export const ProjectItem = ({ project }) => {
             className="flex flex-col gap-1"
           >
             <h5 className="text-xl font-bold tracking-tight w-3/4 line-clamp-2">{name}</h5>
-            <p className="font-bold text-taskunity-800 line-clamp-1">{client}</p>
+            <p className="font-bold text-Synkr-800 line-clamp-1">{client}</p>
             <p className='my-2 line-clamp-3'>{description}</p>
           </Link>
 
@@ -44,7 +44,7 @@ export const ProjectItem = ({ project }) => {
                   <li>
                     <button
                       type='button'
-                      className='hover:text-taskunity-800 transition-colors'
+                      className='hover:text-Synkr-800 transition-colors'
                       onClick={() => onModalEditingProject(project)}
                     >
                       <EditIcon />

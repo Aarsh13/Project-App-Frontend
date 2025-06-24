@@ -1,2 +1,2 @@
-export * from './TaskUnityContext';
-export * from './TaskUnityProvider';
+export * from './SynkrContext';
+export * from './SynkrProvider';
