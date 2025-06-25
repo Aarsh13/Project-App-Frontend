@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSynkrContext, useAuth } from '../../hooks/';
+import { useSynkrContext, useAuth } from '../../hooks';
 import { BarsIcon, ChartIcon, LogoutIcon, ProjectIcon } from './icons';
 
 export const SidebarAdmin = () => {

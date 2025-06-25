@@ -1,5 +1,5 @@
 import { Tab } from '@headlessui/react';
-import { TabTasks } from './';
+import { TabTasks } from '.';
 import { TaskIcon } from './icons';
 
 export const TabsProjectCollaborator = () => {

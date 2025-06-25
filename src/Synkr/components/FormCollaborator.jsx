@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Alert } from '../../components';
 import { useForm, useSynkrContext } from '../../hooks';
-import { CollaboratorResult, Spinner } from './';
+import { CollaboratorResult, Spinner } from '.';
 
 export const FormCollaborator = () => {
 

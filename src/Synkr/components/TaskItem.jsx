@@ -1,5 +1,5 @@
 import { useAdmin, useSynkrContext } from '../../hooks';
-import { DaysRemaining } from './';
+import { DaysRemaining } from '.';
 import { EditIcon, DeleteIcon, CheckIcon } from './icons';
 
 const prioritiesColors = {
