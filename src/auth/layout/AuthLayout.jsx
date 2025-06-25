@@ -7,7 +7,7 @@ export const AuthLayout = () => {
         <div className='mx-auto max-w-xl overflow-hidden rounded-lg bg-white py-12 px-4 md:px-12 shadow'>
           <div className="mb-12 mx-auto max-w-[250px]">
             <img
-              src="/assets/Synkr-logo.png"
+              src="/assets/synkr-logo.png"
               alt="Logo Synkr"
             />
           </div>

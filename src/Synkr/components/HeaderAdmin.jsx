@@ -11,7 +11,7 @@ export const HeaderAdmin = () => {
       <nav className="bg-Synkr-50 border-Synkr-400 border-b">
         <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-0 mx-auto py-4 px-10">
           <Link to={'/dashboard'}>
-            <img src="/assets/Synkr-logo.png" className="h-10" alt="Synkr Logo" />
+            <img src="/assets/synkr-logo.png" className="h-10" alt="Synkr Logo" />
           </Link>
 
           <SearchProject />

@@ -10,9 +10,9 @@ export const BenefitsSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 mb-24">
             <div className="md:col-span-7 shadow-md md:order-last">
-              <img src="/assets/Synkr-dashboard.png" alt="Synkr Dashboard" />
+              <img src="/assets/synkr-dashboard.png" alt="Synkr Dashboard" />
             </div>
-            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:mr-20 lg:mr-28 mt-10 md:mt-0">
+            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:mr-20 lg:mr-28 mt-10 md:mt-0 bg-Synkr-50 p-6">
               <h3 className="text-2xl font-bold">Project Statistics and Tracking</h3>
               <p className="text-lg">Access detailed statistics of your projects and keep real-time tracking of progress with accurate counts of tasks in progress and pending completion.</p>
             </div>
@@ -20,9 +20,9 @@ export const BenefitsSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 mb-24">
             <div className="md:col-span-7 shadow-md md:order-first">
-              <img src="/assets/Synkr-collaborators.png" alt="Synkr Dashboard" />
+              <img src="/assets/synkr-collaborators.png" alt="Synkr Dashboard" />
             </div>
-            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:ml-20 lg:ml-28 mt-10 md:mt-0">
+            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:ml-20 lg:ml-28 mt-10 md:mt-0 bg-Synkr-50 p-6">
               <h3 className="text-2xl font-bold">Work in Real Time with Your Team</h3>
               <p className="text-lg">Add collaborators to your projects and work in real time. There are no more barriers to communication and cooperation.</p>
             </div>
@@ -30,9 +30,9 @@ export const BenefitsSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 mb-24">
             <div className="md:col-span-7 shadow-md md:order-last">
-              <img src="/assets/Synkr-tasks.png" alt="Synkr Dashboard" />
+              <img src="/assets/synkr-tasks.png" alt="Synkr Dashboard" />
             </div>
-            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:mr-20 lg:mr-28 mt-10 md:mt-0">
+            <div className="md:col-span-5 space-y-4 md:flex md:flex-col md:justify-center md:mr-20 lg:mr-28 mt-10 md:mt-0 bg-Synkr-50 p-6">
               <h3 className="text-2xl font-bold">Create Tasks and Set Deadlines Precisely</h3>
               <p className="text-lg">Plan every task in your project. Set completion times and keep your team in sync with a seamless workflow.</p>
             </div>

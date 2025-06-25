@@ -18,7 +18,7 @@ export const HeroSection = () => {
             </div>
 
             <div className='lg:col-span-3'>
-              <img src="/assets/desktop-Synkr.png" alt="Synkr desktop interface" />
+              <img src="/assets/desktop-synkr.png" alt="Synkr desktop interface" />
             </div>
           </div>
         </div>

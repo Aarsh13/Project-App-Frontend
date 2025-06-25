@@ -33,7 +33,7 @@ export const TaskStats = () => {
         label: 'Task(s)',
         data: taskStats,
         backgroundColor: [
-          '#383877',
+          '#233db0',
           '#e4eafb',
         ],
       },

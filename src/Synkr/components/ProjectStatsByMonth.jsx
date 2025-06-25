@@ -45,7 +45,7 @@ export const ProjectStatsByMonth = () => {
     datasets: [
       {
         label: 'Projects per month',
-        backgroundColor: '#383877',
+        backgroundColor: '#233db0',
         data: Object.values(projectsByMonthYear),
       },
     ],
